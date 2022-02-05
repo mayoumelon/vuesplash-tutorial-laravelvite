@@ -1,6 +1,6 @@
 <template>
   <h1><slot></slot></h1>
-  <p> I'm an example component.</p>
+  <p> I'm an example componentでしょうねわわわわわ</p>
 </template>
 
 <script>
