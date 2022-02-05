@@ -17209,8 +17209,8 @@ __webpack_require__.r(__webpack_exports__);
       required: true
     }
   },
-  setup: function setup(__props, _a) {
-    var expose = _a.expose;
+  setup: function setup(__props, _ref) {
+    var expose = _ref.expose;
     expose();
     var count = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)(0);
     var __returned__ = {
