@@ -12,6 +12,11 @@ const mix = require('laravel-mix');
  */
 
  mix.ts('resources/js/app.ts', 'public/js')
+  .eslint({
+    fix: true,
+    extensions: ['ts']
+    //...
+  })
  .postCss('resources/css/app.css', 'public/css', [
    require("tailwindcss"),
   ])
