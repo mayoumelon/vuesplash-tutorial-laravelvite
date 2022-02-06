@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import TestComponent from './TestComponent.vue'
-
+import TestComponent from '../components/TestComponent.vue'
 defineProps<{ msg: string }>()
 
 const count = ref(0)

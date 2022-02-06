@@ -1,8 +1,13 @@
 import { createApp } from 'vue'
-import ExampleComponent from './components/ExampleComponent.vue'
+import App from './App.vue'
+import router from './router'
 
 createApp({
-    components:{
-        ExampleComponent
-    }
-}).mount('#app')
+  el: '#app',
+  components: {
+    App,
+  },
+  template: '<App />',
+})
+  .use(router)
+  .mount('#app')

@@ -7,9 +7,7 @@
   <title>{{ config('app.name') }}</title>
 </head>
 <body>
-  <div id="app">
-    <example-component msg="app.blade.phpより">テストだよ</example-component>
-  </div>
+  <div id="app"></div>
   <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

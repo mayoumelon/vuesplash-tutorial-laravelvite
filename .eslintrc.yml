@@ -22,8 +22,7 @@ rules:
     'tailwindcss/no-arbitrary-value': 'off',
     'tailwindcss/no-custom-classname': 'warn',
     'tailwindcss/no-contradicting-classname': 'error',
-    'vue/singleline-html-element-content-newline':
-      ['error', { 'ignores': ['div', 'pre', 'textarea', ...INLINE_ELEMENTS] }],
+    'vue/singleline-html-element-content-newline': 'off',
     'vue/max-attributes-per-line': 'off',
     'vue/html-self-closing': ['error', { 'html': { 'void': 'always' } }],
   }
