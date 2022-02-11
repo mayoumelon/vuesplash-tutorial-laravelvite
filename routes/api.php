@@ -19,6 +19,7 @@ use App\Http\Controllers\Auth\LoginController;
 // 認証前のルート
 Route::post('/register', [RegisterController::class, 'register']);
 Route::post('/login', [LoginController::class, 'login']);
+Route::post('/logout', [LoginController::class, 'logout']);
 
 // 認証済みのルート
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
