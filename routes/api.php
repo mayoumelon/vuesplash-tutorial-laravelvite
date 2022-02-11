@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,7 @@ use App\Http\Controllers\Auth\RegisterController;
 
 // 認証前のルート
 Route::post('/register', [RegisterController::class, 'register']);
+Route::post('/login', [LoginController::class, 'login']);
 
 // 認証済みのルート
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

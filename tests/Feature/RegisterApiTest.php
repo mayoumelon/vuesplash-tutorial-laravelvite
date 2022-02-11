@@ -21,10 +21,10 @@ class RegisterApiTest extends TestCase
         ];
 
         $response = $this->post('api/register', $data);
+        $response->assertStatus(201);
         $user = User::first();
         $this->assertEquals($data['name'], $user->name);
         $response
-            ->assertStatus(201)
             ->assertJson(['name' => $user->name]);
 
         // $this->assertAuthenticated();

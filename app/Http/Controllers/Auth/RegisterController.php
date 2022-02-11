@@ -12,18 +12,16 @@ class RegisterController extends Controller
     public function register(Request $request)
     {
 
-        $user = new User();
+        $request->validate([
+             'name' => 'required',
+             'email' => 'required',
+             'password' => 'required|confirmed',
+        ]);
 
-        try {
-            $model =  User::create([
-                'name' => $request->name,
-                'email' => $request->email,
-                'password' => Hash::make($request->password),
-            ]);
-        } catch (Throwable $e) {
-            throw $e;
-        }
-        return $model;
-
+        return User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
     }
 }
