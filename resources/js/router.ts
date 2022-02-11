@@ -1,12 +1,17 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import ExamplePage from './pages/ExamplePage.vue'
+import PhotoList from './pages/PhotoList.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'ExamplePage',
-    component: ExamplePage,
+    name: 'PhotoList',
+    component: PhotoList,
   },
+  // {
+  //   path: '/login',
+  //   name: 'Login',
+  //   component: Login,
+  // },
 ]
 
 const router = createRouter({
