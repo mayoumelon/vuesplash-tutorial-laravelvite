@@ -5,15 +5,31 @@ interface LoginForm {
   email: string
   password: string
 }
+interface RegisterForm {
+  name: string
+  email: string
+  password: string
+  password_confirmation: string
+}
 
 const tab = ref(1)
 const loginForm = reactive<LoginForm>({
   email: '',
   password: '',
 })
+const registerForm = reactive<RegisterForm>({
+  name: '',
+  email: '',
+  password: '',
+  password_confirmation: '',
+})
 
 const login = (): void => {
   console.log(loginForm)
+}
+
+const register = (): void => {
+  console.log(registerForm)
 }
 </script>
 
@@ -60,6 +76,48 @@ const login = (): void => {
         </div>
       </form>
     </div>
-    <div v-show="tab === 2">Register Form</div>
+    <div v-show="tab === 2" class="p-8 mt-4 border">
+      <form class="" @submit.prevent="register">
+        <div class="">
+          <label for="username" class="block mb-2">Name</label>
+          <input
+            id="username"
+            v-model="registerForm.name"
+            type="text"
+            class="py-1 px-2 w-full rounded border border-gray-300 focus:border-indigo-500 focus:outline-none focus:ring-indigo-50 appearance-none"
+          />
+        </div>
+        <div class="mt-4">
+          <label for="email" class="block mb-2">Email</label>
+          <input
+            id="email"
+            v-model="registerForm.email"
+            type="text"
+            class="py-1 px-2 w-full rounded border border-gray-300 focus:border-indigo-500 focus:outline-none focus:ring-indigo-50 appearance-none"
+          />
+        </div>
+        <div class="mt-4">
+          <label for="password" class="block mb-2">Password</label>
+          <input
+            id="password"
+            v-model="registerForm.password"
+            type="password"
+            class="py-1 px-2 w-full rounded border border-gray-300 focus:border-indigo-500 focus:outline-none focus:ring-indigo-50 appearance-none"
+          />
+        </div>
+        <div class="mt-4">
+          <label for="password-confirmation" class="block mb-2">Password</label>
+          <input
+            id="password-confirmation"
+            v-model="registerForm.password_confirmation"
+            type="password"
+            class="py-1 px-2 w-full rounded border border-gray-300 focus:border-indigo-500 focus:outline-none focus:ring-indigo-50 appearance-none"
+          />
+        </div>
+        <div class="flex justify-end mt-4">
+          <button type="submit" class="py-1 px-4 text-white bg-gray-800 rounded">register</button>
+        </div>
+      </form>
+    </div>
   </div>
 </template>

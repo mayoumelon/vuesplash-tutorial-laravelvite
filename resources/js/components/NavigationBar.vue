@@ -2,7 +2,9 @@
 
 <template>
   <nav class="flex justify-between items-center p-4 bg-white rounded shadow">
-    <RouterLink to="/" class="text-2xl font-bold text-gray-800">Vuesplash</RouterLink>
+    <RouterLink to="/" class="space-x-4 font-serif text-2xl font-bold text-gray-800">
+      Vuesplash
+    </RouterLink>
     <div class="flex justify-between items-center space-x-4">
       <div>
         <button class="py-1 px-2 text-gray-500 rounded border border-gray-500">
