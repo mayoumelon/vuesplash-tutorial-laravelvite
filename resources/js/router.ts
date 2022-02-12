@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import PhotoList from './pages/PhotoList.vue'
+import UserLogin from './pages/UserLogin.vue'
 
 const routes = [
   {
@@ -7,11 +8,11 @@ const routes = [
     name: 'PhotoList',
     component: PhotoList,
   },
-  // {
-  //   path: '/login',
-  //   name: 'Login',
-  //   component: Login,
-  // },
+  {
+    path: '/login',
+    name: 'UserLogin',
+    component: UserLogin,
+  },
 ]
 
 const router = createRouter({

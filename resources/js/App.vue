@@ -7,7 +7,7 @@ import PageFooter from './components/PageFooter.vue'
     <header>
       <NavigationBar />
     </header>
-    <main>
+    <main class="p-10 mx-auto max-w-screen-lg">
       <div class="container">
         <RouterView />
       </div>
